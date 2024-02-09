@@ -1,32 +1,21 @@
-*{
-    box-sizing: border-box;
-    padding: 0%;
-    margin: 0%;
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap');
+body{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Reem Kufi', sans-serif;
 }
-.sidebar {
-    display: none;
-    background-color: black;
-position: fixed;
-    width: 40%; 
-    height: 100%;
-
-}
-
-.sidebar-open {
-    display: block;
-}
-
-.loader {
+.box{
+    display: flex;
+    flex-direction: column;
+    border:1px solid blue;
+    gap:20px;
     width: 200px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: #f03355;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    animation: l1 2s infinite cubic-bezier(0.3, 1, 0, 1);
-margin:200px;
 }
-
-@keyframes l1 {
-    33% {border-radius: 0;background: #514b82 ;clip-path: polygon(0 0,100% 0,100% 100%,0 100%)}
-    66% {border-radius: 0;background: #ffa516 ;clip-path: polygon(50% 0,50% 0,100% 100%,0 100%)}
+button{
+    background-color: aliceblue;
+    border: none;
 }

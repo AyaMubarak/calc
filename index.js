@@ -1,22 +1,12 @@
-const button = document.querySelector(".show");
-const nav = document.querySelector(".sidebar");
-const load = document.querySelector(".load");
+const buttons = document.querySelectorAll("button");
 
-button.onclick = () => {
-    nav.classList.toggle("sidebar-open");
-    load.classList.toggle("loader");
-};
+buttons.forEach((button) => {
+    button.onclick = () => {
+        const targetId = button.getAttribute("data-target");
+        const paragraph = document.getElementById(targetId);
 
-const svg = document.querySelector("svg");
-
-svg.onclick = () => {
-    if (nav.classList.contains("sidebar-open") && load.classList.contains("loader")) {
-        nav.classList.remove("sidebar-open");
-        load.classList.remove("loader");
-    }
-};
-
-
-
-
-
+        let count = parseInt(paragraph.innerHTML);
+        count++;
+        paragraph.innerHTML = count;
+    };
+});
